@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Otimização de SEO básica -->
+  <meta name="description" content="Os melhores achados e promoções de Tutóia e região. Participe dos nossos grupos de ofertas exclusivas no WhatsApp.">
+  <meta name="keywords" content="promoções, tutóia, ofertas, shopee, mercado livre, grupos, descontos">
+  <title>Promoções Tutóia | Ofertas Exclusivas</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+    
+    :root {
+      --bg-color: #0a0a0a;
+      --text-main: #ffffff;
+      --text-muted: #888888;
+      --accent-1: #ff6a00;
+      --accent-2: #ffb700;
+      --glass-bg: rgba(255, 255, 255, 0.04);
+      --glass-border: rgba(255, 255, 255, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--bg-color);
+      /* Fundo com gradiente radial sutil para maior profundidade */
+      background: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .pt-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Animações de Entrada */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-in {
+      animation: fadeInUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      opacity: 0;
+    }
+    
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    /* Cabeçalho */
+    .pt-logo-ring {
+      width: 86px; height: 86px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem; font-size: 2.5rem;
+      box-shadow: 0 8px 24px rgba(255, 106, 0, 0.25);
+    }
+    
+    .pt-title { font-size: 1.8rem; font-weight: 900; letter-spacing: -0.5px; text-align: center; line-height: 1.1; }
+    .pt-title span { color: var(--accent-2); }
+    .pt-subtitle { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+    
+    .pt-divider { 
+      width: 48px; height: 4px; 
+      background: linear-gradient(90deg, var(--accent-1), var(--accent-2)); 
+      border-radius: 2px; margin: 1.8rem 0; 
+    }
+
+    /* Caixa de Informação - Estilo Glassmorphism */
+    .pt-info-box {
+      width: 100%; max-width: 440px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .pt-info-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #a0a0a0; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .pt-platforms { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    .pt-plat { display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.85rem; font-weight: 800; }
+    .pt-plat-ml { background: #ffe000; color: #2d1a00; }
+    .pt-plat-sh { background: #ff5722; color: #fff; }
+    .pt-plat-desc { font-size: 0.85rem; color: #999; margin-top: 0.85rem; line-height: 1.6; }
+
+    /* Lista de Botões */
+    .pt-section-label {
+      font-size: 0.7rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #a0a0a0; margin-bottom: 1rem; align-self: center;
+      width: 100%; max-width: 440px; text-align: left;
+    }
+    
+    .pt-buttons { display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 440px; }
+    
+    .pt-btn {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.1rem 1.25rem; border-radius: 16px; border: none;
+      cursor: pointer; text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      position: relative; overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .pt-btn:hover { 
+      transform: translateY(-4px) scale(1.01); 
+      filter: brightness(1.1);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    }
+    
+    .pt-btn:active { transform: translateY(0) scale(0.98); }
+    
+    .pt-btn-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; flex-shrink: 0;
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.1);
+    }
+    
+    .pt-btn-text { flex: 1; }
+    .pt-btn-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; opacity: 0.85; }
+    .pt-btn-name { font-size: 1.1rem; font-weight: 900; line-height: 1.2; margin-top: 3px; }
+    .pt-btn-arrow { font-size: 1.3rem; opacity: 0.6; transition: transform 0.2s; }
+    
+    .pt-btn:hover .pt-btn-arrow { transform: translateX(4px); opacity: 1; }
+
+    /* Animação de pulso para a badge */
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+      70% { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+    }
+
+    .pt-badge { 
+      position: absolute; top: 12px; right: 14px; 
+      background: rgba(255,255,255,0.25); color: white; 
+      font-size: 0.65rem; font-weight: 800; letter-spacing: 0.8px; 
+      text-transform: uppercase; padding: 4px 10px; border-radius: 20px; 
+      backdrop-filter: blur(4px);
+    }
+    
+    .pt-badge.active-badge {
+      animation: pulseGlow 2s infinite;
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+    }
+
+    /* Cores dos Botões com Gradientes Aprimorados */
+    .btn-sup   { background: linear-gradient(135deg, #135821, #259e3c); color: #f0fff0; }
+    .btn-masc  { background: linear-gradient(135deg, #09305c, #165cac); color: #e6f2ff; }
+    .btn-geral { background: linear-gradient(135deg, #a63f00, #f06a00); color: #fff8eb; }
+    .btn-fem   { background: linear-gradient(135deg, #6b0046, #c2007e); color: #fff0f9; }
+    .btn-perf  { background: linear-gradient(135deg, #400069, #8c26c7); color: #f8f0ff; }
+
+    /* Rodapé e Tags */
+    .pt-tag-row { display: flex; gap: 0.6rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+    .pt-tag { background: var(--glass-bg); border: 1px solid var(--glass-border); color: #999; font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; }
+    
+    .pt-footer { margin-top: 2rem; font-size: 0.8rem; color: #555; text-align: center; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <main class="pt-page">
+
+    <div class="pt-logo-ring animate-in" aria-hidden="true">🏷️</div>
+    <h1 class="pt-title animate-in">Promoções<br><span>Tutóia</span></h1>
+    <p class="pt-subtitle animate-in delay-1">Maranhão · Ofertas do dia</p>
+    <div class="pt-divider animate-in delay-1"></div>
+
+    <section class="pt-info-box animate-in delay-2" aria-labelledby="info-title">
+      <div class="pt-info-label" id="info-title">🛍️ Onde encontrar os produtos</div>
+      <div class="pt-platforms">
+        <span class="pt-plat pt-plat-ml">🛒 Mercado Livre</span>
+        <span class="pt-plat pt-plat-sh">🧡 Shopee</span>
+      </div>
+      <p class="pt-plat-desc">Todas as promoções divulgadas nos grupos são de produtos disponíveis no Mercado Livre e na Shopee. Rápido, seguro e com entrega para Tutóia!</p>
+    </section>
+
+    <p class="pt-section-label animate-in delay-3">📲 Grupos de promoções</p>
+    
+    <nav class="pt-buttons animate-in delay-3" aria-label="Grupos de promoções">
+
+      <a class="pt-btn btn-sup" href="#" aria-label="Entrar no Grupo de Suplementos">
+        <div class="pt-btn-icon" aria-hidden="true">💪</div>
+        <div class="pt-btn-text">
+          <div class="pt-btn-label">Saúde & Performance</div>
+          <div class="pt-btn-name">Grupo de Suplementos</div>
+        </div>
+        <div class="pt-btn-arrow" aria-hidden="true">›</div>
+        <span class="pt-badge active-badge">🔥 Ativo</span>
+      </a>
+
+      <a class="pt-btn btn-masc" href="#" aria-label="Entrar no grupo Achados Masculinos">
+        <div class="pt-btn-icon" aria-hidden="true">🔧</div>
+        <div class="pt-btn-text">
+          <div class="pt-btn-label">Ferramentas & Auto</div>
+          <div class="pt-btn-name">Achados Masculinos</div>
+        </div>
+        <div class="pt-btn-arrow" aria-hidden="true">›</div>
+      </a>
+
+      <a class="pt-btn btn-geral" href="#" aria-label="Entrar no grupo Promoções Gerais">
+        <div class="pt-btn-icon" aria-hidden="true">🛒</div>
+        <div class="pt-btn-text">
+          <div class="pt-btn-label">Todo tipo de oferta</div>
+          <div class="pt-btn-name">Promoções Gerais</div>
+        </div>
+        <div class="pt-btn-arrow" aria-hidden="true">›</div>
+        <span class="pt-badge">⭐ Principal</span>
+      </a>
+
+      <a class="pt-btn btn-fem" href="#" aria-label="Entrar no grupo Achados Femininos">
+        <div class="pt-btn-icon" aria-hidden="true">👜</div>
+        <div class="pt-btn-text">
+          <div class="pt-btn-label">Moda, beleza & casa</div>
+          <div class="pt-btn-name">Achados Femininos</div>
+        </div>
+        <div class="pt-btn-arrow" aria-hidden="true">›</div>
+      </a>
+
+      <a class="pt-btn btn-perf" href="#" aria-label="Entrar no grupo Beleza para Todos">
+        <div class="pt-btn-icon" aria-hidden="true">🌸</div>
+        <div class="pt-btn-text">
+          <div class="pt-btn-label">Perfumes & Cosméticos</div>
+          <div class="pt-btn-name">Beleza para Todos</div>
+        </div>
+        <div class="pt-btn-arrow" aria-hidden="true">›</div>
+      </a>
+
+    </nav>
+
+    <footer class="animate-in delay-4">
+      <div class="pt-tag-row">
+        <span class="pt-tag">📍 Tutóia - MA</span>
+        <span class="pt-tag">💸 Economize mais</span>
+        <span class="pt-tag">📲 Grupos no WhatsApp</span>
+      </div>
+      <p class="pt-footer">© 2026 Promoções Tutóia · Compartilhe e indique!</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

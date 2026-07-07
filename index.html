@@ -238,6 +238,38 @@
     font-family: 'Space Mono', monospace; font-size: 0.6rem; font-weight: 700;
     letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
   }
+  .brand{
+    text-align:center;
+    margin:10px 0 25px;
+    font-family:'Archivo Black',sans-serif;
+    font-size:3rem;
+    letter-spacing:-2px;
+    line-height:1;
+    user-select:none;
+}
+
+.brand-tutoia{
+    color:#ffffff;
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.35);
+}
+
+.brand-promo{
+    background:linear-gradient(135deg,#FFD84D,#FF9F1A,#FF5E00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    margin-left:4px;
+    filter:drop-shadow(0 4px 10px rgba(255,160,0,.35));
+}
+
+@media(max-width:600px){
+
+.brand{
+    font-size:2.4rem;
+}
+
+}
 
   /* ---------- Rodapé ---------- */
   .tag-row { display: flex; gap: 0.6rem; justify-content: center; margin-top: 2.2rem; flex-wrap: wrap; }
@@ -250,7 +282,9 @@
 <main class="wrap">
 
   <section style="padding:2rem 0 0.5rem;text-align:center;">
-<div style="font-family:Archivo Black,sans-serif;font-size:2rem;color:#f0b429;">TUTOIAPROMO</div>
+<div class="brand">
+    <span class="brand-tutoia">TUTOIA</span><span class="brand-promo">PROMO</span>
+</div>
 <p style="color:#cbab86;margin-top:.5rem">Entre gratuitamente em um dos grupos abaixo.</p>
 </section>
 <section class="top-groups" id="grupos">
